@@ -1,0 +1,209 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #c0f7c2, #a0eac1); /* Light Green Gradient */
+    color: #000;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #66cc66; /* Light Green */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideIn 1s ease-out, headerGlow 2s infinite alternate; /* Added Glow Animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(102, 204, 102, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(102, 204, 102, 0.8);
+    }
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #a0eac1; /* Light Green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInCard 1s ease, cardHoverEffect 2s infinite alternate; /* Added Card Hover Animation */
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes cardHoverEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    background: #66cc66; /* Light Green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+button:hover {
+    background: #4dbe4d; /* Darker Green */
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInTable 1s ease;
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #a0eac1; /* Light Green */
+}
+
+tr:hover {
+    background: #e0ffe0; /* Light Green Hover */
+    transition: background 0.3s ease;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #a0eac1; /* Light Green border */
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 10px rgba(102, 204, 102, 0.8); /* Light Green Focus */
+    outline: none;
+}
+
+.notification {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    animation: fadeInNotification 1s ease, notificationPulse 2s infinite;
+}
+
+@keyframes fadeInNotification {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notificationPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slideInFooter 1s ease-out, footerGlow 2s infinite alternate; /* Added Footer Glow Animation */
+}
+
+@keyframes slideInFooter {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes footerGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 0, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(0, 255, 0, 0.8);
+    }
+}
